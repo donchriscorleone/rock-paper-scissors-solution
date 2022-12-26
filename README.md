@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/donchriscorleone/rock-paper-scissors-solution)
+- Live Site URL: [Netlify](https://rock-paper-scissor-by-christopherii.netlify.app/)
 
 ## My Process
 
