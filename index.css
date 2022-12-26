@@ -320,7 +320,7 @@ button.btn-close .icon {
 .selection-wrapper {
   font-size: 0.75rem;
   position: relative;
-  background-image: url("./../images/bg-pentagon.svg");
+  background-image: url("./images/bg-pentagon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -433,12 +433,10 @@ body {
     /* position the top  edge of the element at the middle of the parent */
     left: 50%;
     /* position the left edge of the element at the middle of the parent */
-    scale: 0;
   }
   .main .modal.open {
-    scale: 1;
-    transform: translate(-50%, -50%);
-    transition: scale 0.35s;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform 0.35s;
   }
 
   .main-wrapper {

@@ -87,13 +87,11 @@ body {
         .modal {
             top: 50%;  /* position the top  edge of the element at the middle of the parent */
             left: 50%; /* position the left edge of the element at the middle of the parent */
-            scale: 0;
         }
 
         .modal.open {
-            scale: 1;
-            transform: translate(-50%, -50%);
-            transition: scale .35s;
+            transform: scale(1) translate(-50%, -50%);
+            transition: transform .35s;
         }
     }
 
