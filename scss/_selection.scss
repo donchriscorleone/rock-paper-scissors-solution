@@ -1,0 +1,50 @@
+@import './variables';
+
+.selection {
+    height: 20em;
+}
+
+.selection-wrapper {
+    font-size: .75rem;
+    position: relative;
+    background-image: url('./../images/bg-pentagon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+
+    button.btn-icon {
+        position: absolute;
+
+        &[data-icon="scissor"] {
+            top: -10px;
+            left: calc(50% - 3em);
+        }
+
+        &[data-icon="spock"] {
+            top: 7.5em;
+            left: calc(50% - 15em);
+        }
+
+        &[data-icon="paper"] {
+            top: 7.5em;
+            right: calc(50% - 15em);
+        }
+
+        &[data-icon="lizard"] {
+            bottom: -1em;
+            left: calc(50% - 9em);
+        }
+
+        &[data-icon="rock"] {
+            bottom: -1em;
+            right: calc(50% - 9em);
+        }
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .selection-wrapper {
+        font-size: .975rem;
+    }
+}

@@ -1,0 +1,70 @@
+@import './variables';
+
+.bg-gradient-scissor {
+    background: linear-gradient($gradient-scissor);
+}
+
+.bg-gradient-paper {
+    background: linear-gradient($gradient-paper);
+}
+
+.bg-gradient-rock {
+    background: linear-gradient($gradient-rock);
+}
+
+.bg-gradient-lizard {
+    background: linear-gradient($gradient-lizard);
+}
+
+.bg-gradient-cyan {
+    background: linear-gradient($gradient-cyan);
+}
+
+.bg-dark-text {
+    background-color: $color-dark-text;
+}
+
+.bg-score-text {
+    background-color: $color-score-text;
+}
+
+.bg-header-outline {
+    background-color: $color-header-outline;
+}
+
+.bg-gradient-radial {
+    background: linear-gradient($gradient-radial);
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.fw-600 {
+    font-weight: $fw-600;
+}
+
+.fw-700 {
+    font-weight: $fw-700;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.container {
+    max-width: var(--max-width, 100vw);
+    margin-inline: auto;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

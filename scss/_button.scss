@@ -1,0 +1,79 @@
+@import './variables';
+
+button.btn-icon {
+    border-radius: 100%;
+    padding: .75em;
+    border: none;
+    cursor: pointer;
+
+    .icon-wrapper {
+        background-color: #fff;
+        border-radius: 100%;
+        padding: .85em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0px 3px 0px 2px rgb(0 0 0 / 10%);
+    }
+
+    .icon {
+        width: 2.3em;
+        height: 2.3em;
+    }
+
+    &[data-icon="scissor"] {
+        background: linear-gradient($gradient-scissor);
+    }
+
+    &[data-icon="paper"] {
+        background: linear-gradient($gradient-paper);
+    }
+
+    &[data-icon="rock"] {
+        background: linear-gradient($gradient-rock);
+    }
+
+    &[data-icon="lizard"] {
+        background: linear-gradient($gradient-lizard);
+    }
+
+    &[data-icon="spock"] {
+        background: linear-gradient($gradient-cyan);
+    }
+}
+
+button.btn {
+    font-size: .9em;
+    text-transform: uppercase;
+    padding: .5em 1.75em;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: color .35s, background-color .35s;
+
+    &:hover {
+        color: $color-dark-text;
+        border-color: $color-dark-text;
+        background-color: #fff;
+    }
+}
+
+button.btn-close {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}

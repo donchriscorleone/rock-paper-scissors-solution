@@ -1,0 +1,136 @@
+@import './variables';
+
+body {
+    height: 100vh;
+}
+
+.main {
+    height: 100%;
+    position: relative;
+    transition: box-shadow .35s;
+
+    .modal {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        transition: transform .35s;
+    }
+
+    .modal.open {
+        transform: scale(1);
+        transition: transform .35s;
+    }
+
+    &.backdrop {
+        box-shadow: inset 0px 0px 0px 100vw rgb(0 0 0 / 25%);
+    }
+}
+
+.main-wrapper {
+    --max-width: 45em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+
+    .btn {
+        align-self: center;
+    }
+
+    .selection:not([data-state="initial"]) {
+        display: none;
+    }
+
+    .selection[data-state=initial] ~ .picked-container {
+        display: none;
+    }
+}
+
+.picked-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &[data-state=finished] {
+        row-gap: 2em;
+        
+        .picked-result-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.25rem;
+            gap: .5em;
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+
+    &[data-state=picking] {
+        .picked-result-container {
+            display: none;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (min-width: 50em) {
+    .main {
+        position: relative;
+
+        .modal {
+            top: 50%;  /* position the top  edge of the element at the middle of the parent */
+            left: 50%; /* position the left edge of the element at the middle of the parent */
+            scale: 0;
+        }
+
+        .modal.open {
+            scale: 1;
+            transform: translate(-50%, -50%);
+            transition: scale .35s;
+        }
+    }
+
+    .main-wrapper {
+        justify-content: initial;
+        --max-width: 50em;
+
+        .picked-container, .selection {
+            margin-top: 5em;
+        }
+
+        > .btn {
+            position: absolute;
+            bottom: 3em;
+            right: 2em;
+        }
+    }
+
+    .picked-container {
+        &[data-state=finished] {
+            grid-template-columns: repeat(3, 1fr);
+
+            .picked-result-container {
+                font-size: 1.45rem;
+                grid-column: initial;
+                grid-row: initial;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75em) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    .main-wrapper {
+        justify-content: space-evenly;
+    }
+}

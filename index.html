@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body class="bg-gradient-radial">
+  <main class="main bg-transparent">
+    <div class="main-wrapper | container">
+      <div class="scoreboard">
+        <div class="scoreboard-wrapper">
+          <div class="scoreboard-signs">
+            <ul class="list">
+              <li>
+                <span class="color-white uppercase">Rock</span>
+              </li>
+              <li>
+                <span class="color-white uppercase">Paper</span>
+              </li>
+              <li>
+                <span class="color-white uppercase">Scissors</span>
+              </li>
+              <li>
+                <span class="color-white uppercase">Lizard</span>
+              </li>
+              <li>
+                <span class="color-white uppercase">Spock</span>
+              </li>
+            </ul>
+          </div>
+          <div class="score-container">
+            <div class="score-wrapper">
+              <span class="score-title">score</span>
+              <span class="score" data-score="0">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="selection" data-state="initial">
+        <div class="selection-wrapper">
+          <button class="btn-icon" data-icon="scissor" data-type="sign" aria-label="scissor button">
+            <div class="icon-wrapper">
+              <svg class="icon">
+                <use xlink:href="./assets/icon-signs.svg#icon-scissor"></use>
+              </svg>
+            </div>
+          </button>
+        
+          <button class="btn-icon" data-icon="rock" data-type="sign" aria-label="rock button">
+            <div class="icon-wrapper">
+              <svg class="icon">
+                <use xlink:href="./assets/icon-signs.svg#icon-rock"></use>
+              </svg>
+            </div>
+          </button>
+        
+          <button class="btn-icon" data-icon="paper" data-type="sign" aria-label="paper button">
+            <div class="icon-wrapper">
+              <svg class="icon">
+                <use xlink:href="./assets/icon-signs.svg#icon-paper"></use>
+              </svg>
+            </div>
+          </button>
+        
+          <button class="btn-icon" data-icon="lizard" data-type="sign" aria-label="lizard button">
+            <div class="icon-wrapper">
+              <svg class="icon">
+                <use xlink:href="./assets/icon-signs.svg#icon-lizard"></use>
+              </svg>
+            </div>
+          </button>
+        
+          <button class="btn-icon" data-icon="spock" data-type="sign" aria-label="spock button">
+            <div class="icon-wrapper">
+              <svg class="icon">
+                <use xlink:href="./assets/icon-signs.svg#icon-spock"></use>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="picked-container" data-state="picking">
+
+        <div class="pick pick-user" data-state="picked">
+          <div class="pick-container">
+          </div>
+          <span class="pick-title | uppercase color-white">You Picked</span>
+        </div>
+
+        <div class="picked-result-container">
+          <span class="picked-result | color-white uppercase">You lose</span>
+          <button class="btn" data-type="reset">Play again</button>
+        </div>
+      
+        <div class="pick pick-comp" data-state="picking">
+          <div class="pick-container">
+            
+          </div>
+          <span class="pick-title | uppercase color-white">The house picked</span>
+        </div>
+      </div>
+
+      <button class="btn" data-type="rule">Rules</button>
+
+    </div>
+
+    <div class="modal | container">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <span class="modal-title">Rules</span>
+          <button class="btn-close modal-close" aria-label="close button">
+            <div class="icon-container">
+              <svg class="icon">
+                <use xlink:href="./assets/icon-close.svg#icon-close"></use>
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="modal-content">
+          <img src="./images/image-rules-bonus.svg" alt="Rules">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="attribution">
+      <a class="color-white" href="https://www.frontendmentor.io" target="_blank">Challenged by Frontend Mentor</a>
+      <a class="color-white uppercase" href="https://www.instagram.com/devchristopherii" target="_blank">Coded by Christopher II</a>
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+</html>

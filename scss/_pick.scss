@@ -1,0 +1,59 @@
+@import './variables';
+
+.pick {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+
+    &.pick-comp[data-state=picking] {
+        &::before {
+            content: '';
+            border-radius: 100%;
+            width: 5em;
+            height: 5em;
+            background: linear-gradient($gradient-radial);
+        }
+
+        .pick-container {
+            display: none;
+        }
+    }
+
+    &[data-state=won] {
+        .pick-container {
+            border-radius: 100%;
+            animation: animate-pulse 3s linear infinite;
+        }
+    }
+
+    .pick-title {
+        font-size: .75em;
+        letter-spacing: 3px;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .pick {
+        flex-direction: column-reverse;
+        gap: 1em;
+        font-size: 2rem;
+    }
+}
+
+@keyframes animate-pulse{
+    0%{
+        box-shadow: 0 0 0 0 hsl(214, 47%, 23%),  0 0 0 0 hsl(214, 47%, 23%);
+    }
+    40%{
+        box-shadow: 0 0 0 3em rgba(255,109,74,0.0),  0 0 0 0 hsl(214, 47%, 23%);
+    }
+    80%{
+        box-shadow: 0 0 0 3em rgba(255,109,74,0.0),  0 0 0 2em rgba(255,109,74,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,0.0),  0 0 0 2em rgba(255,109,74,0);
+    }
+    
+}

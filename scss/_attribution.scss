@@ -1,0 +1,11 @@
+.attribution {
+    a {
+        color: #666;
+        transition: color .35s;
+
+        &:focus-within, &:hover {
+            color: #858585;
+
+        }
+    }
+}
